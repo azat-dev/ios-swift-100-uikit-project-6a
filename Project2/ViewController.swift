@@ -54,6 +54,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .always
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .action,
+            target: self,
+            action:  #selector(shareButtonTapped)
+        )
+        
         button1.layer.borderWidth = 1
         button2.layer.borderWidth = 1
         button3.layer.borderWidth = 1
@@ -63,6 +69,17 @@ class ViewController: UIViewController {
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
         askQuestion()
+    }
+    
+    @objc func shareButtonTapped() {
+        let shareText = "Try to use \"Storm Viewer\". I liked it!"
+        let activity = UIActivityViewController(
+            activityItems: [shareText],
+            applicationActivities: nil
+        )
+        
+        activity.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(activity, animated: true)
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
