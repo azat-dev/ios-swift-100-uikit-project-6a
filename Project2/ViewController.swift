@@ -67,21 +67,33 @@ class ViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
+        var messageRightCountry: String?
+        let selectedAnswerIndex = sender.tag
         
-        if sender.tag == correctAnswerIndex {
+        if selectedAnswerIndex == correctAnswerIndex {
             title = "Correct"
             score += 1
         } else {
-            title = "Wrong"
+            title = "Wrong!"
             score -= 1
+            let actualCountry = countries[selectedAnswerIndex]
+            messageRightCountry = "That’s the flag of \(actualCountry.uppercased())"
+        }
+        
+        let messageScore: String
+        
+        if round == 10 {
+            messageScore = "Your final score is \(score)"
+        } else {
+            messageScore = "Your score is \(score)"
         }
         
         let message: String
         
-        if round == 10 {
-            message = "Your final score is \(score)"
+        if let messageRightCountry = messageRightCountry {
+            message = "\(messageRightCountry)\n\(messageScore)"
         } else {
-            message = "Your score is \(score)"
+            message = messageScore
         }
         
         updateTitle()
