@@ -13,8 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     
+    var round = 0
     var score = 0
-    var correctAnswer = 0
+    var correctAnswerIndex = 0
+    var correctCountry: String {
+        countries[correctAnswerIndex]
+    }
+    
     var countries = [
         "estonia",
         "france",
@@ -30,10 +35,15 @@ class ViewController: UIViewController {
         "us"
     ]
     
+    func updateTitle() {
+        title = "\(correctCountry.uppercased()). Score: \(score)"
+    }
+    
     func askQuestion() {
+        round += 1
         countries.shuffle()
-        correctAnswer = Int.random(in: 0...2)
-        title = countries[correctAnswer].uppercased()
+        correctAnswerIndex = Int.random(in: 0...2)
+        updateTitle()
         
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
@@ -58,7 +68,7 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
         
-        if sender.tag == correctAnswer {
+        if sender.tag == correctAnswerIndex {
             title = "Correct"
             score += 1
         } else {
@@ -66,9 +76,19 @@ class ViewController: UIViewController {
             score -= 1
         }
         
+        let message: String
+        
+        if round == 10 {
+            message = "Your final score is \(score)"
+        } else {
+            message = "Your score is \(score)"
+        }
+        
+        updateTitle()
+        
         let alertController = UIAlertController(
             title: title,
-            message: "Your score is \(score)",
+            message: message,
             preferredStyle: .alert
         )
         
