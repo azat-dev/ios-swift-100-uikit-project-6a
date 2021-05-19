@@ -55,7 +55,8 @@ class ViewController: UIViewController {
         
         navigationItem.largeTitleDisplayMode = .always
         navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .action,
+            title: "Score",
+            style: .done,
             target: self,
             action:  #selector(shareButtonTapped)
         )
@@ -72,14 +73,20 @@ class ViewController: UIViewController {
     }
     
     @objc func shareButtonTapped() {
-        let shareText = "Try to use \"Storm Viewer\". I liked it!"
-        let activity = UIActivityViewController(
-            activityItems: [shareText],
-            applicationActivities: nil
+        let alert = UIAlertController(
+            title: "Score",
+            message: "Your score is: \(score)",
+            preferredStyle: .alert
         )
         
-        activity.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-        present(activity, animated: true)
+        alert.addAction(
+            UIAlertAction(
+                title: "Close",
+                style: .default
+            )
+        )
+        
+        present(alert, animated: true)
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
