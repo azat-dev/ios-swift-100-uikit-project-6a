@@ -40,7 +40,7 @@
 		AAD409D02651D89300A16540 = {
 			isa = PBXGroup;
 			children = (
-				AAD409DB2651D89300A16540 /* Project2 */,
+				AAD409DB2651D89300A16540 /* Project6a */,
 				AAD409DA2651D89300A16540 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AAD409DB2651D89300A16540 /* Project2 */ = {
+		AAD409DB2651D89300A16540 /* Project6a */ = {
 			isa = PBXGroup;
 			children = (
 				AAD409DC2651D89300A16540 /* AppDelegate.swift */,
@@ -64,7 +64,7 @@
 				AAD409E72651D89300A16540 /* LaunchScreen.storyboard */,
 				AAD409EA2651D89300A16540 /* Info.plist */,
 			);
-			path = Project2;
+			path = Project6a;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +288,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JWF52JVK7;
-				INFOPLIST_FILE = Project2/Info.plist;
+				INFOPLIST_FILE = Project6a/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +307,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JWF52JVK7;
-				INFOPLIST_FILE = Project2/Info.plist;
+				INFOPLIST_FILE = Project6a/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
