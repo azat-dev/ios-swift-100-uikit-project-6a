@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x1j-QU-hLR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x1j-QU-hLR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,13 +11,16 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project6a" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adw-kD-mps">
                                 <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="adw-kD-mps" secondAttribute="height" multiplier="2:1" id="UqL-9w-UrR"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6NL-yk-s1t"/>
@@ -25,6 +28,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1f-Lf-LMq" userLabel="Button2">
                                 <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="a1f-Lf-LMq" secondAttribute="height" multiplier="2:1" id="bcd-sh-FYO"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6jl-Ys-4rx"/>
@@ -32,6 +38,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKV-Of-7yq" userLabel="Button3">
                                 <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hKV-Of-7yq" secondAttribute="height" multiplier="2:1" id="Pwi-rt-9TU"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zYc-LE-3Rn"/>
@@ -45,6 +54,9 @@
                             <constraint firstItem="a1f-Lf-LMq" firstAttribute="centerX" secondItem="adw-kD-mps" secondAttribute="centerX" id="Ofv-5x-CcA"/>
                             <constraint firstItem="adw-kD-mps" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UuX-bU-hLN"/>
                             <constraint firstItem="hKV-Of-7yq" firstAttribute="centerX" secondItem="a1f-Lf-LMq" secondAttribute="centerX" id="cKj-k8-kut"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hKV-Of-7yq" secondAttribute="bottom" constant="20" id="hjI-ZI-IQy"/>
+                            <constraint firstItem="a1f-Lf-LMq" firstAttribute="height" secondItem="hKV-Of-7yq" secondAttribute="height" id="kxP-8A-BZL"/>
+                            <constraint firstItem="adw-kD-mps" firstAttribute="height" secondItem="a1f-Lf-LMq" secondAttribute="height" id="m3Z-oS-vZ5"/>
                             <constraint firstItem="adw-kD-mps" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="wCR-Uu-TZI"/>
                             <constraint firstItem="a1f-Lf-LMq" firstAttribute="top" secondItem="adw-kD-mps" secondAttribute="bottom" constant="30" id="zVm-Uj-Cv5"/>
                         </constraints>
